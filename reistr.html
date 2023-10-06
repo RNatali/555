@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Замовлення кімнати в готелі</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Замовлення кімнати в готелі</h1>
+        <form action="process_order.php" method="post">
+            <label for="name">Ім'я:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="check-in">Дата заїзду:</label>
+            <input type="date" id="check-in" name="check-in" required>
+
+            <label for="check-out">Дата виїзду:</label>
+            <input type="date" id="check-out" name="check-out" required>
+
+            <label for="room-type">Тип кімнати:</label>
+            <select id="room-type" name="room-type">
+                <option value="single">Одномісна</option>
+                <option value="double">Двомісна</option>
+                <option value="suite">Люкс</option>
+            </select>
+
+            <label for="comments">Додаткові побажання:</label>
+            <textarea id="comments" name="comments" rows="4"></textarea>
+
+            <button type="submit">Замовити</button>
+        </form>
+    </div>
+</body>
+</html>
+<style>/* Загальні стилі */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #66b1c8;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #95c3ecb1;
+        box-shadow: 0 0 10px rgb(255, 255, 255);
+    }
+    
+    h1 {
+        text-align: center;
+        color: #000000;
+    }
+    
+    /* Стилі для форми */
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    label {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    select,
+    textarea {
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #005fb3;
+        border-radius: 5px;
+    }
+    
+    button {
+        background-color: #0056b3;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #557c93;
+    }
+    </style>
